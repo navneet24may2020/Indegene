@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font-awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+  <!---JQUERY link-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!---Google Font-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!--Bootstrap CDN link-->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--Clos-->
+
+  <!-----Internal CSS START-->
+  <style>
+    body {
+      background-color: rgb(134, 194, 169);
+    }
+
+    i {
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      border: 1px solid rgb(29, 5, 5);
+      padding: 90px;
+      box-shadow: 0px -6px 5px rgb(223, 149, 66);
+      animation: mymove 5s infinite;
+      animation-delay: 2s;
+      position: relative;
+    }
+
+    @keyframes mymove {
+      from {
+        left: 0px;
+      }
+
+      to {
+        left: 70px;
+      }
+    }
+
+    .fa {
+      margin: 25px;
+    }
+
+    .navbar {
+      height: 30px;
+
+    }
+
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+      text-decoration-style: solid;
+    }
+
+    #myBar {
+      width: 40%;
+      height: 30px;
+      background-color: #e45a31;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+      border-radius: 20px;
+      text-shadow: rgb(253, 106, 135);
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: rgb(42, 228, 150);
+        align-items: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: tomato;
+
+      }
+
+
+    }
+  </style>
+  <!---Internal CSS close-->
+
+
+  <title>Navneet vaibhav Test series</title>
+
+</head>
+
+<body>
+
+  <div style="max-width: 100%;" class="container-fluid">
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+  </div>
+  </nav>
+
+  <section id="Result Of The Test">
+    <div class="container mt-5 pb-5">
+      <div class="row text-center">
+        <div class="col-sm-12">
+          <h1
+            style="color: white;font-size: 45px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Result Of The Test</h1>
+        </div>
+      </div>
+
+      <div class="orange-line m-auto"></div>
+  </section>
+  <!--section body start-->
+  <div class="container mt-5 pb-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="item">
+          <div class="test1">
+            <i style=" color: darkred;" class="fa fa-comment fa-3x"></i>
+          </div><br />
+
+        </div>
+
+      </div><br />
+
+      <div class="col-md-3">
+        <div class="item">
+          <div class="test2">
+            <i style=" color: darkred;" class="fa fa-calendar fa-3x"></i>
+          </div>
+        </div><br />
+
+
+      </div><br />
+      <div class="col-md-3">
+        <div class="item">
+          <div class="test3">
+            <i style=" color: darkred;" class="fa fa-angellist fa-3x"></i>
+          </div>
+
+        </div><br />
+
+      </div><br />
+      <div class="col-md-3">
+        <div class="item">
+          <div class="test4">
+            <i style="color: darkred;" class="fa fa-calendar fa-3x"></i>
+          </div>
+
+        </div>
+
+      </div><br />
+
+
+    </div>
+
+
+  </div>
+  <!----section body close-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="myProgress">
+          <div id="myBar">LESS RELEVANT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+
+
+  </div>
+
+  <section id="Result Of The Test">
+    <div class="container mt-5 pb-5">
+      <div class="row text-center">
+        <div class="col-sm-12"><button
+            style="font-size: 25px;  text-align: center;border-radius: 50%; background-color: rgb(160, 206, 207);  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
+            onclick="move()">Try again</button>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <script>
+          var i = 0;
+
+          function move() {
+            if (i == 0) {
+              i = 1;
+              var elem = document.getElementById("myBar");
+              var width = 10;
+              var id = setInterval(frame, 40);
+
+              function frame() {
+                if (width >= 100) {
+                  clearInterval(id);
+                  i = 0;
+                } else {
+                  width++;
+                  elem.style.width = width + "%";
+                  elem.innerHTML = width + "%";
+
+                }
+              }
+            }
+          }
+        </script>
+
+        <!-----close java script coding -->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+          integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
